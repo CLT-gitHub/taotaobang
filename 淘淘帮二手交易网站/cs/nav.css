@@ -1,0 +1,45 @@
+﻿/*母版页Css*/
+
+/*侧边导航*/
+     
+
+/*内容*/
+.show {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin: 0,auto;
+}
+
+.mainbody {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2px;
+    background-color: #fff;
+    text-align: left;
+}
+
+.leftside {
+    width: 20%;
+    float: left;
+}
+
+.rightside {
+    width: 80%;
+    float: right;
+}
+
+
+/*脚*/
+.footer {
+    width: 100%;
+    height: 150px;
+    background-color: #5B7FA7;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 40px;
+    font-family: "微软雅黑";
+    font-size: 18px;
+    margin-top: 100px;
+}
+

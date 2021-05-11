@@ -1,0 +1,140 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>首页</title>
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+
+    <link href="cs/nav.css" rel="stylesheet" />
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style type="text/css">   
+        .header{
+            height: 130px;
+        }
+        #menu {          
+            position: relative;
+            text-align: center;
+            overflow: hidden;
+            border-bottom: 2px solid #808080;
+        }
+
+        #menu ul {        
+            list-style: none;
+            float: left;
+            position: relative;
+            left: 50%;
+        }
+
+        #menu ul li {            
+            position: relative;
+            right: 70%;
+            float: left;
+            margin: 10px;
+            padding-top: 50px;
+        }
+
+        #menu ul li:hover { /* 鼠标滑过的颜色*/
+            border-bottom: 3px solid #3ccf15;
+        }
+
+        #menu ul li a {
+            color: #000000;
+            text-transform: uppercase;
+            text-decoration: none; /*没有下换线*/
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+
+        <!--header-->
+       
+<div class="header" >
+            <div id="menu" class="menu">                 
+                <ul> 
+                   <li style="border-bottom:0px solid #ffffff; padding-top:0px;">
+                       <img src="image/logo.png" />
+                   </li>
+                    <li >
+                        <a href="Home.aspx">首页</a>                                             
+                    </li>
+                    <li>
+                        <a href="#">发布宝贝</a>
+                        
+                    </li>
+                    <li>
+                        <a href="#">我的收藏</a>
+                        
+                    </li>
+                    <li>                        
+                        
+                    </li>
+                    <li>
+                      
+                        
+                    </li>
+                    <li style="border-bottom:0px solid #ffffff; padding-top:50px;">
+                        <a href=""><img src="image/mail.png" /></a>
+                    
+                    </li>
+                    <li style="border-bottom:0px solid #ffffff; padding-top:30px; ">
+                        <a href="PersonalCenter.aspx"><img src="image/person.png" /></a>                        
+                    </li> 
+                    <li style="border-bottom:0px solid #ffffff; padding-top:50px; ">
+                        <a href="Login.axpx"><label>请登录</label></a>                        
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+
+        <!--Body1-->
+        <section class="mainbody">
+            <div class="leftside">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="rightside">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <%-- 下面<div>元素左右两侧均不允许其他浮动元素，并显示分隔线 --%>
+            <div class="clear"></div>
+        </section>
+
+        <!--Body2-->
+        <section class="mainbody">
+
+          <div class="leftside">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+            </asp:ContentPlaceHolder>
+          </div>
+          <div class="rightside">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+            </asp:ContentPlaceHolder>
+          </div>
+          <%-- 下面<div>元素左右两侧均不允许其他浮动元素 --%>
+          <div style="clear: both;"></div>
+        </section>
+
+        <%-- 脚--%>
+        <div class="footer">
+            Copyright & copy2020<br/>
+            E-main:TaoTaoBang@123.com<br/>
+        </div>
+    </form>
+</body>
+</html>
